@@ -4,8 +4,8 @@ pipeline {
 		stage('checkout') {
 			steps {
 				script {
-					properties([pipelineTriggers([pollSCM('* * * * *')])])
-				}
+                    properties([pipelineTriggers([pollSCM('* * * * *')])])
+                }
 				git 'https://github.com/TomerM25/Project.git'
 		    }
 		}
