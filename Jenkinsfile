@@ -1,13 +1,13 @@
 pipeline {
     agent any
     options {
-        buildDiscarder(logRotator(numToKeepStr: '5', daysToKeepStr: '10'))
+        buildDiscarder(logRotator(numToKeepStr: '20', daysToKeepStr: '10'))
     }
 	stages {
 		stage('checkout') {
 			steps {
 				script {
-                    properties([pipelineTriggers([pollSCM('* * * * *')])])
+                    properties([pipelineTriggers([pollSCM('H/30 * * * *')])])
                 }
 				git 'https://github.com/TomerM25/Project.git'
 		    }
