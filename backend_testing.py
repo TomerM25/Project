@@ -2,7 +2,7 @@ import pymysql
 import requests
 
 
-user_id = 26
+user_id = 25
 user_name = 'Tomer'
 db_host = 'sql7.freemysqlhosting.net'
 db_user = 'sql7620888'
@@ -19,13 +19,6 @@ req_get = requests.get(f'http://127.0.0.1:5000/users/{user_id}')
 req_get_data = req_get.json()
 req_get_user_name = req_get_data.get('user_name')
 
-# Log
-print(f'post: {req_post.status_code}')
-print(f'post type: {type(req_post.status_code)}')
-print(f'get: {req_get.status_code}')
-print(f'get type: {type(req_get.status_code)}')
-print(f'user: {user_name}')
-print(f'get user: {req_get_user_name}')
 
 # Check if the retrieved user name matches the expected user name
 if req_get.status_code == 200 and user_name == req_get_user_name:

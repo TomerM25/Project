@@ -24,7 +24,7 @@ req_get_data = req_get.json()
 req_get_user_name = req_get_data.get('user_name')
 
 # Check if the retrieved user name matches the expected user name
-if req_get.status_code == '200' and user_name == req_get_user_name:
+if req_get.status_code == 200 and user_name == req_get_user_name:
     print('SUCCESS: user name matches')
 else:
     print('ERROR: user name does not match')
