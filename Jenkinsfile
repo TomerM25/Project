@@ -9,6 +9,13 @@ pipeline {
 				git 'https://github.com/TomerM25/Project.git'
 		    }
 		}
+		stage('install packages') {
+			steps {
+				script {
+					bat 'pip install pymysql'
+				}
+		    }
+		}
 		stage('run backend') {
 			steps {
 				script {
