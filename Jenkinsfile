@@ -16,5 +16,40 @@ pipeline {
 				}
 		    }
 		}
+		stage('run frontend') {
+			steps {
+				script {
+					bat 'start /min python web_app.py'
+				}
+		    }
+		}
+		stage('run backend testing') {
+			steps {
+				script {
+					bat 'python backend_testing.py'
+				}
+		    }
+		}
+		stage('run frontend testing') {
+			steps {
+				script {
+					bat 'python frontend_testing.py'
+				}
+		    }
+		}
+		stage('run combined testing') {
+			steps {
+				script {
+					bat 'python combined_testing.py'
+				}
+		    }
+		}
+		stage('clean') {
+			steps {
+				script {
+					bat 'python clean_environment.py'
+				}
+		    }
+		}
 	}
 }
