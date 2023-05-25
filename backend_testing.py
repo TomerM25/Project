@@ -3,7 +3,7 @@ import requests
 
 
 user_id = 25
-user_name = 'David'
+user_name = 'Tomer'
 db_host = 'sql7.freemysqlhosting.net'
 db_user = 'sql7620888'
 db_pass = 'r3b4L5FbeQ'

@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
 
-user_id = 100
+user_id = 25
 driver_path = "C:/Users/tomer/Downloads/chromedriver_win32/chromedriver.exe"
 
 
