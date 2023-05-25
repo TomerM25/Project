@@ -12,7 +12,10 @@ pipeline {
 		stage('install packages') {
 			steps {
 				script {
+					bat 'pip install flask'
 					bat 'pip install pymysql'
+					bat 'pip install requests'
+					bat 'pip install selenium'
 				}
 		    }
 		}
